@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <!-- External CSS -->
+ <link rel="stylesheet" type="text/css" href="../weather-dashboard/assets/css/style.css">
+ <!-- Font Awesome Code -->
+ <script src="https://kit.fontawesome.com/5599b5ab1b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+<div class="navbar navbar-light bg-dark text-white d-flex justify-content-center">
+    <h1 class="display-8">Weather Dashboard</h1>
+</div>
+
+<div class="container col-12 justify-content-center">
+    <div class="row">
+        <!-- Search bar and button -->
+        <div class="col-3 bg-light">
+            <br>
+            <h4>Search for a City:</h4>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button id="search" style="font-size:30px" class="fas fa-search"><a href="#" style="color:white"></a></button>
+            </form>
+            <br>
+            <!-- List of Suggested Cities -->
+            <ul class="list-group">
+                <li class="list-group-item">Austin</li>
+                <li class="list-group-item">Chicago</li>
+                <li class="list-group-item">New York</li>
+                <li class="list-group-item">Orlando</li>
+                <li class="list-group-item">San Francisco</li>
+                <li class="list-group-item">Seattle</li>
+                <li class="list-group-item">Denver</li>
+                <li class="list-group-item">Atlanta</li>
+            </ul>
+            <br>
+        </div>
+        <!-- Container for Weather Results -->
+        <div class="col-6 bg-light">
+            <div class="date col-6" id="results">
+                <div class="card" style="width:45rem; height: 12rem;">
+                  <div class="card-body">
+                    <br>
+                    <h5 class="card-text" id="temperature">Temperature: </h5>
+                    <h5 class="card-text" id="humidity">Humidity: </h5>
+                    <h5 class="card-text" id="windspeed">Wind Speed: </h5>
+                    <h5 class="card-text" id="uvindex">UV Index: </h5>
+
+                  </div>
+                </div>
+            </div>
+
+            <br>
+            <h3>5-Day Forecast:</h3>
+
+            <div class="row">
+                    <div class="card" id="oneday">
+                        <div class="card-body">
+                            <h6 class="daystamp"></h6>
+                            <br>
+                            <p class="card-text">Temp: </p>
+                            <p class="card-text">Humidity: </p>
+                        </div>
+                    </div>
+                    <div class="card" id="twodays">
+                        <div class="card-body">
+                            <h6 class="daystamp"></h6>
+                            <br>
+                            <p class="card-text">Temp: </p>
+                            <p class="card-text">Humidity: </p>
+                        </div>
+                    </div>
+                    <div class="card" id="threedays">
+                        <div class="card-body">
+                            <h6 class="daystamp"></h6>
+                            <br>
+                            <p class="card-text">Temp: </p>
+                            <p class="card-text">Humidity: </p>
+                        </div>
+                    </div>
+                    <div class="card" id="fourdays">
+                        <div class="card-body">
+                            <h6 class="daystamp"></h6>
+                            <br>
+                            <p class="card-text">Temp: </p>
+                            <p class="card-text">Humidity: </p>
+                        </div>
+                    </div>
+                    <div class="card" id="fivedays">
+                        <div class="card-body">
+                            <h6 class="daystamp"></h6>
+                            <br>
+                            <p class="card-text">Temp: </p>
+                            <p class="card-text">Humidity: </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+        
+    
+      <!-- <div class="card" style="width: 15rem;">
+        <div class="card-body">
+          <p class="card-text"></p>
+        </div>
+      </div> -->
+      <!-- <div class="card" style="width: 15rem;">
+        <div class="card-body">
+          <p class="card-text"></p>
+        </div>
+      </div> -->
+      <!-- <div class="card" style="width: 15rem;">
+        <div class="card-body">
+          <p class="card-text"></p>
+        </div>
+      </div> -->
+      <!-- <div class="card" style="width: 15rem;">
+        <div class="card-body">
+          <p class="card-text"></p>
+        </div>
+      </div> -->
+    </div>
+</div> 
+
+
+<!-- Footer -->
+<footer class="footer fixed-bottom footer-light bg-dark d-flex justify-content-center">
+    <p class="navbar-brand text-white bg-dark">Alia Kyle Perry 2019 &copy;</p>
+</footer>
+<!-- JavaScript and JQuery Code -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="../weather-dashboard/assets/javascript/script.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+</body>
+</html>
