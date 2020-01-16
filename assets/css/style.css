@@ -1,0 +1,111 @@
+/* Background Image */
+html, body {
+    background-image: url(../images/goldenhourbeach.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Navbar Header */
+.text-white {
+    text-align: center;
+    opacity: 80%;
+}
+
+.main {
+    opacity: 10%;
+}
+
+.container {
+    margin-top: 55px;
+    margin-left: 210px;
+    opacity: 80%;
+}
+
+/* Search bar and results */
+.date {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
+    border-radius: 25px;
+    background-color: rgb(102, 206, 224);
+    padding: 5px;
+}
+
+h4 {
+    margin-top: 15px;
+}
+
+h5 {
+    font-weight: normal;
+}
+
+#results {
+    margin-top: 50px;
+}
+
+/* 5-Day Forecast */
+p {
+    font-size: 13pt;
+}
+
+h3 {
+    margin-left: 20px;
+}
+
+h6 {
+    font-size: 13pt;
+}
+
+#oneday {
+    margin-top: 25px;
+    margin-left: 30px;
+    height: 125px;
+    width: 125px;
+    background-color: rgb(102, 206, 224);
+    opacity: 90%;
+}
+
+#twodays {
+    margin-top: 25px;
+    margin-left: 30px;
+    height: 125px;
+    width: 125px;
+    background-color: rgb(145, 208, 219);
+    opacity: 90%;
+}
+
+#threedays {
+    margin-top: 25px;
+    margin-left: 30px;
+    height: 125px;
+    width: 125px;
+    background-color: rgb(215, 221, 223);
+    opacity: 90%;
+}
+
+#fourdays {
+    margin-top: 25px;
+    margin-left: 30px;
+    height: 125px;
+    width: 125px;
+    background-color: rgb(245, 208, 160);
+    opacity: 90%;
+}
+
+#fivedays {
+    margin-top: 25px;
+    margin-left: 30px;
+    height: 125px;
+    width: 125px;
+    background-color: rgb(248, 179, 148);
+    opacity: 90%;
+}
+
+/* Navbar Footer */
+.footer {
+    opacity: 60%;
+    color: white;
+}
