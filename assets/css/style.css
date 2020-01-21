@@ -32,6 +32,10 @@ button {
     border-radius: 25px;
     background-color: rgb(102, 206, 224);
     padding: 5px;
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    clear: right;
 }
 
 h4 {

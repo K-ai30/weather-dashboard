@@ -24,10 +24,12 @@
         <div class="col-3 bg-light">
             <br>
             <h4>Search for a City:</h4>
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button id="search" style="font-size:30px" class="fas fa-search"><a href="#" style="color:white"></a></button>
-            </form>
+            <!-- <form class="form-inline"> -->
+                <form class="form-group">
+                    <input id="entry" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 340px;"/>
+                    <button id="search" style="font-size:30px" class="fas fa-search"></button>
+                </form>
+            <!-- </form> -->
             <br>
             <!-- List of Suggested Cities -->
             <ul class="list-group">
@@ -47,12 +49,16 @@
             <div class="date col-6" id="results">
                 <div class="card" style="width:45rem; height: 12rem;">
                   <div class="card-body">
-                    <br>
-                    <h5 class="card-text" id="temperature">Temperature: </h5>
-                    <h5 class="card-text" id="humidity">Humidity: </h5>
-                    <h5 class="card-text" id="windspeed">Wind Speed: </h5>
-                    <h5 class="card-text" id="uvindex">UV Index: </h5>
-
+                    <h3 id="cityName"></h3>
+                    <h3 class="card-text" id="date"></h3>
+                    <h5 class="card-text">Temperature:</h5>
+                    <div id="temperature"></div>
+                    <h5 class="card-text">Humidity:</h5>
+                    <div id="humidity"></div>
+                    <h5 class="card-text" >Wind Speed:</h5>
+                    <div id="windspeed"></div>
+                    <h5 class="card-text">UV Index:</h5>
+                    <div id="uvindex"></div>
                   </div>
                 </div>
             </div>
@@ -63,42 +69,42 @@
             <div class="row">
                     <div class="card" id="oneday">
                         <div class="card-body">
-                            <h6 class="daystamp"></h6>
+                            <h6 id="day1" class="daystamp"></h6>
                             <br>
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                            <p id="temp1" class="card-text">Temp: </p>
+                            <p id="hum1" class="card-text">Humidity: </p>
                         </div>
                     </div>
                     <div class="card" id="twodays">
                         <div class="card-body">
-                            <h6 class="daystamp"></h6>
+                            <h6 id="day2" class="daystamp"></h6>
                             <br>
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                            <p id="temp2" class="card-text">Temp: </p>
+                            <p id="hum2"class="card-text">Humidity: </p>
                         </div>
                     </div>
                     <div class="card" id="threedays">
                         <div class="card-body">
-                            <h6 class="daystamp"></h6>
+                            <h6 id="day3" class="daystamp"></h6>
                             <br>
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                            <p id="temp3" class="card-text">Temp: </p>
+                            <p id="hum3" class="card-text">Humidity: </p>
                         </div>
                     </div>
                     <div class="card" id="fourdays">
                         <div class="card-body">
-                            <h6 class="daystamp"></h6>
+                            <h6 id="day4" class="daystamp"></h6>
                             <br>
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                            <p id="temp4" class="card-text">Temp: </p>
+                            <p id="hum4" class="card-text">Humidity: </p>
                         </div>
                     </div>
                     <div class="card" id="fivedays">
                         <div class="card-body">
-                            <h6 class="daystamp"></h6>
+                            <h6 id="day5" class="daystamp"></h6>
                             <br>
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                            <p id="temp5" class="card-text">Temp: </p>
+                            <p id="hum5" class="card-text">Humidity: </p>
                         </div>
                     </div>
                 </div>
@@ -137,7 +143,7 @@
     <p class="navbar-brand text-white bg-dark">Alia Kyle Perry 2019 &copy;</p>
 </footer>
 <!-- JavaScript and JQuery Code -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="../weather-dashboard/assets/javascript/script.js"></script>
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
