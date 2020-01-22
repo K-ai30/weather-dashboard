@@ -1,22 +1,21 @@
+// This is my API key
 var apiKey = 'b9da2b7e40a98e59cb40534717905908';
+// This is my array for the city search results
+var citySearchArray = []
+
 
 $(document).ready(function(){
     var currentDate = moment().format('l');
     $("#date").append(currentDate)
-    // $("#temperature").append('');
-    // $("#humidity").append('');
-    // $("#windspeed").append('');
-    // $("#uvindex").append('');
-    //  Identify variables to target
-    // Date for results and city
+    $("#temperature").append('');
+    $("#humidity").append('');
+    $("#windspeed").append('');
+    $("#uvindex").append('');
     
     // $("#city").css("style", "font-weight: bold")
     getWeather();
 })
 
-var cityName = $("#entry").val()
-$("#cityName").append(cityName);
- 
 function cityName() {
     console.log("cityName displays")
     var cityName = $("#entry").val()
@@ -27,7 +26,8 @@ function cityName() {
 
 function getWeather() {
     console.log("getWeather called")
-    $("#search").on("click", function () {
+    $("#search").on("click", function (evt) {
+        evt.preventDefault()
         let city = $("#entry").val();
         weatherData(city);
     })
@@ -61,11 +61,12 @@ function getWeather() {
     }
 
     function showWeatherInfo(info){
-        $("#temperature").append("Temperature: " + "°F");
-        // $("#temperature").append(convertTemp(info.kTemp) + ' °F');
+        // $("#temperature").append("Temperature: " + "°F");
+        $("#temperature").append(convertTemp(info.kTemp) + ' °F');
         $("#humidity").append(info.humidity);
         $("#windspeed").append(info.windspeed);
         $("#uvindex").append(info.uvi);
+        convertTemp()
       }
 
     function fivedayForecast() {
