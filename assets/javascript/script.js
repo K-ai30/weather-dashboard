@@ -7,10 +7,10 @@ var citySearchArray = []
 $(document).ready(function(){
     var currentDate = moment().format('l');
     $("#date").append(currentDate)
-    $("#temperature").append('');
-    $("#humidity").append('');
-    $("#windspeed").append('');
-    $("#uvindex").append('');
+    $("#temperature").append('Temperature: ');
+    $("#humidity").append('Humidity: ');
+    $("#windspeed").append('Windspeed: ');
+    $("#uvindex").append('UV Index: ');
     
     // $("#city").css("style", "font-weight: bold")
     getWeather();
@@ -60,6 +60,8 @@ function getWeather() {
         })
     }
 
+    clearData();
+
     function showWeatherInfo(info){
         // $("#temperature").append("Temperature: " + "°F");
         $("#temperature").append(convertTemp(info.kTemp) + ' °F');
@@ -75,18 +77,23 @@ function getWeather() {
             url: fivedayURL,
             method: "GET",
         }).then(function(response){
+            
     })
 
 
+}
     
     // Kelvin to Fahrenheit
     function convertTemp(temp) {
         return Math.floor((temp - 273.15) * 9 / 5 + 32)
     }
-}
 
     function clearData() {
         $("#city").empty();
         $("#temperature").empty();
+        $("#humidity").empty();
         $("#windspeed").empty();
+        $("#uvindex").empty();
     }
+
+    

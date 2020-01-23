@@ -46,6 +46,10 @@ h5 {
     font-weight: normal;
 }
 
+div {
+    font-size: 12pt;
+}
+
 #results {
     margin-top: 50px;
 }
