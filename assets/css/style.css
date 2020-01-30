@@ -22,9 +22,17 @@ html, body {
     opacity: 80%;
 }
 
+#search {
+    display: inline-block;
+}
+
+#entry {
+    display: inline-block;
+}
+
 /* Search bar and results */
 .date {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -35,7 +43,7 @@ button {
     float: right;
     margin-top: 0px;
     margin-bottom: 0px;
-    clear: right;
+    /* clear: right; */
 }
 
 h4 {
@@ -45,13 +53,65 @@ h4 {
 h5 {
     font-weight: normal;
 }
+#date {
+    display: inline-block;
+}
+
+#icon {
+    display: none;
+    display: inline-block;
+    margin-left: 2px;
+    background-color: rgb(102, 206, 224);
+    border-radius: 25px;
+    border: 2px solid grey;
+}
+
+#cityName {
+    display: inline-block;
+}
 
 div {
-    font-size: 12pt;
+    font-size: 11pt;
 }
 
 #results {
-    margin-top: 50px;
+    margin-top: 45px;
+}
+
+#temperature {
+    margin-left: 8px;
+}
+
+#humidity {
+    margin-left: 8px;
+}
+
+#windspeed {
+    margin-left: 8px;
+}
+
+#uvindex {
+    margin-left: 8px;
+}
+
+.low {
+    background-color: green;
+    color: white;
+}
+
+.moderate {
+    background-color: yellow;
+    color: black;
+}
+
+.high {
+    background-color: orange;
+    color: white;
+}
+
+.veryhigh {
+    background-color: red;
+    color: white;
 }
 
 /* 5-Day Forecast */
@@ -60,7 +120,7 @@ p {
 }
 
 h3 {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 h6 {
