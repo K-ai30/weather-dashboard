@@ -31,6 +31,7 @@ function getWeather() {
         clearData();
         let city = $("#entry").val();
         weatherData(city);
+        fivedayForecast(city);
     })
 }
 
@@ -75,12 +76,14 @@ function getWeather() {
         uvIndexScale(info.uvi)
       }
 
-    function fivedayForecast() {
+    function fivedayForecast(city) {
         var fivedayURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
         $.ajax({
             url: fivedayURL,
             method: "GET",
         }).then(function(response){
+            let fiveDays = [response.list[0], response.list[6], response.list[14], response.list[30], response.list[38]];
+            forecastResults(fiveDays);
     })
 }
     function iconURL(filename) {
@@ -114,37 +117,37 @@ function getWeather() {
         $("#uvindex").addClass(risk)
     }
 
-    function forecastResults() {
-        var forecastResults = `https://api.openweathermap.org/data/2.5/forecast?id=524901`;
-
-        $("#day1").append('');
-        $("<br>").append(weatherIcon);  
-        $("#temp1").append("Temp: " + ' °F');
-        $("#hum1").append("Humidity: " );
-        
-        $("#day2").append('');
-        $("<br>").append(weatherIcon);    
-        $("#temp2").append("Temp: " + ' °F');
-        $("#hum2").append("Humidity: " );
-        
-        $("#day3").append('');
-        $("<br>").append(weatherIcon);    
-        $("#temp3").append("Temp: " + ' °F');
-        $("#hum3").append("Humidity: " );
-        
-        $("#day4").append('');  
-        $("<br>").append(weatherIcon);  
-        $("#temp4").append("Temp: " + ' °F');
-        $("#hum4").append("Humidity: " );
-        
-        $("#day5").append(''); 
-        $("<br>").append(weatherIcon);   
-        $("#temp5").append("Temp: " + ' °F');
-        $("#hum5").append("Humidity: " );
+    function forecastResults(forecastInfo) {
+        for (let i = 0; i < 5; i++) {
+            let day = $("#day" + (i+1));
+            let icon = $("#icon" + (i+1));
+            let temp = $("#temp" + (i+1));
+            let hum = $("#hum" + (i+1));
+            let URL = iconURL(forecastInfo[i].weather[0].icon);
+            let ftemp = convertTemp(forecastInfo[i].main.temp);
+            $(day).append(forecastInfo[i].dt_txt);
+            // Select the image in the context of icon, which is my div for the image
+            $("img", icon).first().attr("src", URL);
+            $(icon).show();
+            $(temp).append('Temp: ' + ftemp + ' °F');
+            $(hum).append('Humidity: ' + forecastInfo[i].main.humidity);
+        }
     }
 
     function generateList() {
         $("#entry").on('click', function (event) {
-            localStorage.setItem(, JSON.stringify(citySearchArray));
-        }
+            localStorage.setItem(JSON.stringify(citySearchArray));
+        })
     }
+
+    // get text
+    // look for the array from local storage
+    // check to see if the text is in local storage array, if not, add it
+    // save that array to local storage
+    // on page load, call function that gets array from LS
+    // loops over that array, adds each city to list
+    // make an element, make an li adding the text
+    // append the li to ul
+    // li.text()
+    // another function that updates everytime I hit search, 2 functions needed (save to local storage, load from local storage)
+

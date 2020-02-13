@@ -17,9 +17,10 @@ html, body {
 }
 
 .container {
-    margin-top: 55px;
-    margin-left: 210px;
+    margin-top: 100px;
+    /* margin-left: 210px; */
     opacity: 80%;
+    width: 1000px;
 }
 
 #search {
@@ -28,6 +29,10 @@ html, body {
 
 #entry {
     display: inline-block;
+}
+
+.row {
+    height: 250px;
 }
 
 /* Search bar and results */
@@ -114,9 +119,13 @@ div {
     color: white;
 }
 
+li {
+
+}
+
 /* 5-Day Forecast */
 p {
-    font-size: 13pt;
+    font-size: 11pt;
 }
 
 h3 {
@@ -124,50 +133,50 @@ h3 {
 }
 
 h6 {
-    font-size: 13pt;
+    font-size: 11pt;
 }
 
 #oneday {
     margin-top: 25px;
-    margin-left: 30px;
-    height: 125px;
-    width: 125px;
+    margin-left: 20px;
+    height: 140px;
+    width: 140px;
     background-color: rgb(102, 206, 224);
     opacity: 90%;
 }
 
 #twodays {
     margin-top: 25px;
-    margin-left: 30px;
-    height: 125px;
-    width: 125px;
+    margin-left: 20px;
+    height: 140px;
+    width: 140px;
     background-color: rgb(145, 208, 219);
     opacity: 90%;
 }
 
 #threedays {
     margin-top: 25px;
-    margin-left: 30px;
-    height: 125px;
-    width: 125px;
+    margin-left: 20px;
+    height: 140px;
+    width: 140px;
     background-color: rgb(215, 221, 223);
     opacity: 90%;
 }
 
 #fourdays {
     margin-top: 25px;
-    margin-left: 30px;
-    height: 125px;
-    width: 125px;
+    margin-left: 20px;
+    height: 140px;
+    width: 140px;
     background-color: rgb(245, 208, 160);
     opacity: 90%;
 }
 
 #fivedays {
     margin-top: 25px;
-    margin-left: 30px;
-    height: 125px;
-    width: 125px;
+    margin-left: 20px;
+    height: 140px;
+    width: 140px;
     background-color: rgb(248, 179, 148);
     opacity: 90%;
 }

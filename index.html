@@ -13,45 +13,37 @@
  <script src="https://kit.fontawesome.com/5599b5ab1b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-   
-<div class="navbar navbar-light bg-dark text-white d-flex justify-content-center">
-    <h1 class="display-8">Weather Dashboard</h1>
+<div class="navbar navbar-expand-lg bg-dark text-white d-flex justify-content-center">
+    <h1 class="navbar-brand d-flex justify-content-center text-white">Weather Dashboard</h1>
 </div>
 
-<div class="container col-12 justify-content-center">
+<div class="container col-12 d-flex justify-content-center">
     <div class="row">
         <!-- Search bar and button -->
-        <div class="col-3 bg-light">
+        <div class="col-2 bg-light">
             <br>
             <h4>Search for a City:</h4>
             <!-- <form class="form-inline"> -->
                 <form class="form-group">
-                    <input id="entry" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 340px;"/>
+                    <input id="entry" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 110px;"/>
                     <button id="search" style="font-size:30px" class="fas fa-search"></button>
                 </form>
             <!-- </form> -->
             <br>
             <!-- List of Suggested Cities -->
             <ul class="list-group">
-                <li id="1" class="list-group-item">Austin</li>
-                <li id="2"class="list-group-item">Chicago</li>
-                <li id="3" class="list-group-item">New York</li>
-                <li id="4" class="list-group-item">Orlando</li>
-                <li id="5" class="list-group-item">San Francisco</li>
-                <li id="6" class="list-group-item">Seattle</li>
-                <li id="7" class="list-group-item">Denver</li>
-                <li id="8" class="list-group-item">Atlanta</li>
+                
             </ul>
             <br>
         </div>
         <!-- Container for Weather Results -->
-        <div class="col-6 bg-light">
+        <div class="col-10 bg-light">
             <div class="date col-6" id="results">
                 <div class="card" style="width:45rem; height: 12rem;">
                   <div class="card-body">
                     <h3 id="cityName"></h3>
                     <h3 class="card-text" id="date"></h3>
-                    <div id="icon">
+                    <div class="iconContainer" id="icon">
                       <img src="">
                     </div>
                     <!-- <h5 class="card-text">Temperature:</h5> -->
@@ -73,7 +65,9 @@
                     <div class="card" id="oneday">
                         <div class="card-body">
                             <h6 id="day1" class="daystamp"></h6>
-                            <br>
+                            <div class="iconContainer" id="icon1">
+                              <img src="">
+                            </div>
                             <p id="temp1" class="card-text"></p>
                             <p id="hum1" class="card-text"></p>
                         </div>
@@ -81,7 +75,9 @@
                     <div class="card" id="twodays">
                         <div class="card-body">
                             <h6 id="day2" class="daystamp"></h6>
-                            <br>
+                            <div class="iconContainer" id="icon2">
+                              <img src="">
+                            </div>
                             <p id="temp2" class="card-text"></p>
                             <p id="hum2"class="card-text"></p>
                         </div>
@@ -89,7 +85,9 @@
                     <div class="card" id="threedays">
                         <div class="card-body">
                             <h6 id="day3" class="daystamp"></h6>
-                            <br>
+                            <div class="iconContainer" id="icon3">
+                              <img src="">
+                            </div>
                             <p id="temp3" class="card-text"></p>
                             <p id="hum3" class="card-text"></p>
                         </div>
@@ -97,7 +95,9 @@
                     <div class="card" id="fourdays">
                         <div class="card-body">
                             <h6 id="day4" class="daystamp"></h6>
-                            <br>
+                            <div class="iconContainer" id="icon4">
+                              <img src="">
+                            </div>
                             <p id="temp4" class="card-text"></p>
                             <p id="hum4" class="card-text"></p>
                         </div>
@@ -105,7 +105,9 @@
                     <div class="card" id="fivedays">
                         <div class="card-body">
                             <h6 id="day5" class="daystamp"></h6>
-                            <br>
+                            <div class="iconContainer" id="icon5">
+                              <img src="">
+                            </div>
                             <p id="temp5" class="card-text"></p>
                             <p id="hum5" class="card-text"></p>
                         </div>
@@ -143,7 +145,7 @@
 
 <!-- Footer -->
 <footer class="footer fixed-bottom footer-light bg-dark d-flex justify-content-center">
-    <p class="navbar-brand text-white bg-dark">Alia Kyle Perry 2019 &copy;</p>
+    <p class="navbar-brand text-white bg-dark">Alia Kyle Perry 2020 &copy;</p>
 </footer>
 <!-- JavaScript and JQuery Code -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
